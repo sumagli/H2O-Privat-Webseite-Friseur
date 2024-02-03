@@ -14,14 +14,18 @@ export default function Directions() {
 
     return (
         <div className={styles.Directions}>
-            <h1>Anfhart</h1>
+            <h1>Anfahrt</h1>
 
             <div className={styles.DirectionsBody}>
                 <p>
-                    Unser Salon ist optimal mit öffentlichen Verkehrsmitteln erreichbar. Nehmen Sie die Linien U1, U2, U4, U9 oder U14 bis zur Haltestelle Stöckach. Von Stuttgart Hauptbahnhof sind es nur 5 Minuten Fahrtzeit, das entspricht 3 Stationen.
+                    <h2>Hackstraße 22, 70190 Stuttgart</h2>
+                    Unser Salon ist optimal mit öffentlichen Verkehrsmitteln erreichbar.
+                    Fahren Sie hierfür mit den Linien U1, U2, U4, U9 oder U14 bis zur Haltestelle Stöckach.
+                    Vom Hauptbahnhof Stuttgart erreichen Sie uns in nur 5 Minuten.
                     <br />
                     <br />
-                    Für die Anreise mit dem Auto stehen Parkmöglichkeiten direkt gegenüber unserem Friseursalon am Stöckachplatz zur Verfügung.
+                    Für die Anreise mit dem Auto stehen Parkmöglichkeiten direkt gegenüber unserem
+                    Friseursalon am Stöckachplatz zur Verfügung.
                 </p>
 
                 <iframe

@@ -9,7 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import theme from './theme';
+import theme from './theme'
 import { ThemeProvider } from '@mui/material/styles';
 import { Margin } from '@mui/icons-material';
 
@@ -30,7 +30,7 @@ const rowsWomen = [
     createData('Dauerwelle', "ab* 55€", '', '', ''),
     createData('Wimpern färben', "ab* 15€", '', '', ''),
     createData('', '', "zupfen", "färben", ""),
-    createData('Augenbraun', "", 'ab* 12€', 'ab* 12€', ''),
+    createData('Augenbrauen', "", 'ab* 12€', 'ab* 12€', ''),
 ];
 
 const rowsMan = [
@@ -112,7 +112,7 @@ const Pricing = () => {
                         <Separator />
                         <TableHead>
                             <TableRow>
-                                <TableCell style={{ fontWeight: 'bold' }}>Kinder (bis 14 Jahren)</TableCell>
+                                <TableCell style={{ fontWeight: 'bold' }}>Kinder (bis 14 Jahre)</TableCell>
                                 <TableCell align="right"></TableCell>
                                 <TableCell align="right"></TableCell>
                                 <TableCell align="right"></TableCell>

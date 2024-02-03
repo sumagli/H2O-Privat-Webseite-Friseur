@@ -38,7 +38,6 @@ interface HomeProps {
 }
 
 export default function Home({ overlay }: HomeProps) {
-    const footerRef = useRef(null);
 
 
     const test = [
@@ -48,21 +47,10 @@ export default function Home({ overlay }: HomeProps) {
         { imgPath: test55 },
     ];
 
-    const imagesTeam = [
-        { imgPath: team },
-        { imgPath: Iris },
-        { imgPath: Iris2 },
-        { imgPath: Iris3 },
-        { imgPath: Sabiene2 },
-        { imgPath: Ilona },
-
-    ];
-
-
     return (
         <div className={styles.home}>
             <div id='Home'>
-                <SwipeableTextMobileStepper showButtonText={false} uperTitle={"Wilkommen bei Haar Zwei 0HH!"} title={"Ihr Friseur in Stuttgart Ost"} subTitle={"Damen & Herren"} buttonText={"undefined"} images={test} isVisible={!overlay} blur={true} overlay={overlay} />
+                <SwipeableTextMobileStepper textPositionDown={false} showButtonText={false} uperTitle={"Wilkommen bei Haar Zwei OOH!"} title={"Ihr Friseur in Stuttgart Ost"} subTitle={"Damen & Herren"} buttonText={"undefined"} images={test} isVisible={!overlay} blur={true} overlay={overlay} />
             </div>
             <div id='Directions'>
                 <Directions />
@@ -74,7 +62,7 @@ export default function Home({ overlay }: HomeProps) {
                 <SlideshowTeam overlay={overlay} isVisible={true} />
             </div>
             <div id='Footer'>
-                <NewFooter />
+                <NewFooter mainPage={true} />
             </div>
 
         </div >

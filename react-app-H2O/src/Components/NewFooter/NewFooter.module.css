@@ -11,6 +11,10 @@
   z-index: 0;
 }
 
+.footerNotFixed {
+  position: relative;
+}
+
 .footer hr {
   margin-left: 100px;
   margin-right: 100px;
@@ -65,4 +69,17 @@
   left: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  /* This will vertically center the icon */
+  justify-content: center;
+  /* This will horizontally center the icon */
+  /* Set the dimensions of the anchor tag as needed */
+
+  /* Example height */
+  color: #FFF;
+
 }

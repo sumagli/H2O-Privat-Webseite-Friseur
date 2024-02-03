@@ -28,6 +28,11 @@
   justify-content: space-around;
 }
 
+.placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .pointer {
   cursor: pointer;
 }

@@ -1,5 +1,5 @@
 .imprint h1 {
-  margin-top: 100px;
+  padding-top: 100px;
   font-size: 2em;
   text-align: center;
 }
@@ -18,19 +18,14 @@
 }
 
 .imprint {
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  background: #00315A;
+  color: white;
 }
 
-.imprint a {
-  text-decoration: none;
-  color: #424E85;
-}
 
-.imprint a:visited {
-  color: #424E85;
-}
 
 .TopPart {
   display: flex;

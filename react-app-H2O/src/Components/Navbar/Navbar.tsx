@@ -7,37 +7,47 @@ import { FaHome } from "react-icons/fa";
 interface NavbarProps {
   setOverlay: (overlay: boolean) => void;
   overlay: boolean;
+  mainPage: boolean;
 }
 
-const Navbar = ({ setOverlay, overlay }: NavbarProps) => {
+const Navbar = ({ setOverlay, overlay, mainPage }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    if (!mainPage) {
+      setIsScrolled(true); // Always true if not mainPage
+      return; // No need to set up a scroll listener
+    }
+
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
+    // Set up the scroll listener for mainPage
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [mainPage]); // Add mainPage as a dependency
 
   return (
-    <div className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${overlay ? styles.fadeOut : styles.fadeIn}`}>
+    <div className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${overlay ? styles.fadeOut : styles.fadeIn} `} >
       <nav className={styles.topBar}>
         <ul>
-          <li className={styles.pointer} onClick={() => setOverlay(!overlay)}>
-            <BiMenu color='white' />
-            Menü
-          </li>
+          {mainPage &&
+            <li className={styles.pointer} onClick={() => setOverlay(!overlay)}>
+              <BiMenu color='white' />
+              Menü
+            </li>
+          }
+          {!mainPage &&
+            // Render an invisible, non-interactive placeholder
+            <div className={styles.placeholder}></div>
+          }
+
           <li>
-            <a href="#Home" className={styles.iconLink}>
+            <a href="/#Home" className={styles.iconLink}>
               <FaHome color='white' />
             </a>
           </li>

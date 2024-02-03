@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'; // Make sure you've installed react-rou
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 
-const SwipeableTextMobileStepper = ({ overlay, uperTitle, title, subTitle, buttonText, showButtonText, images, isVisible, blur }) => {
+const SwipeableTextMobileStepper = ({ overlay, uperTitle, title, subTitle, buttonText, showButtonText, images, isVisible, blur, textPositionDown }) => {
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
     const maxSteps = images.length;
@@ -93,7 +93,7 @@ const SwipeableTextMobileStepper = ({ overlay, uperTitle, title, subTitle, butto
                 </div>
             }
 
-            <div className={styles.textContent}>
+            <div className={`${!textPositionDown ? styles.textContent : styles.textContentDown}`}>
                 <div
                     className={`${styles.uperTitle} ${isVisible ? styles.animateonvisibleuperTitle : styles.animateOutUperTitle}`}
                 >

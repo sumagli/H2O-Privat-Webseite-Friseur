@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Imprint.module.css';
 import "../../Assats//Fonts/Fonts.css"
+import NewFooter from '../NewFooter/NewFooter';
 
 
 export default function Imprint() {
@@ -113,6 +114,8 @@ export default function Imprint() {
                     Wir möchten ausdrücklich betonen, dass wir keinerlei Einfluss auf die Gestaltung und die Inhalte der gelinkten Seiten hat. Deshalb distanzieren wir uns hiermit von allen Inhalten aller gelinkten Seiten auf der Website www.haarzweiooh.com. Diese Erklärung gilt für alle auf unserer Homepage angezeigten Links und für alle Inhalte der Seiten, zu denen die bei uns sichtbaren Banner, Buttons und Links gegebenenfalls führen. Erstellung website: www.poolarserver.com www.genkelarchitekten.com
                 </p>
             </div>
+
+            <NewFooter mainPage={false} />
         </div>
     );
 }

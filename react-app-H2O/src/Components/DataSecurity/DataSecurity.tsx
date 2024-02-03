@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './DataSecurity.module.css';
 import "../../Assats//Fonts/Fonts.css"
+import NewFooter from '../NewFooter/NewFooter';
 
 
 export default function DataSecurity() {
     return (
-        <div className={styles.imprint}>
+        <div className={styles.DataSecurity}>
             <h1>Datenschutzerklärung</h1>
             <div>
                 <h2>1. Verantwortlicher</h2>
@@ -168,6 +169,8 @@ export default function DataSecurity() {
                 <p>
                     Eine Datenübertragung an Stellen oder Personen außerhalb der EU außerhalb des in dieser Erklärung in Ziffer 4 genannten Falls findet nicht statt und ist nicht geplant.
                 </p>
+
+                <NewFooter mainPage={false} />
             </div>
         </div>
     );

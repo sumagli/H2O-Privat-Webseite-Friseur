@@ -103,7 +103,7 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
     color: #000;
     position: relative;
-    min-width: 120px;
+    min-width: 180px;
     box-sizing: border-box;
     opacity: 0;
 }
@@ -162,7 +162,7 @@
 }
 
 .animateonvisiblebuttonBelow {
-    animation: fade-in 2s 0.9s forwards;
+    animation: fade-in 2s 0s forwards;
 }
 
 @keyframes fadeOut {

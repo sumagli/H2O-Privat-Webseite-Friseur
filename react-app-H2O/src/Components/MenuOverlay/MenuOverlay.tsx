@@ -22,19 +22,19 @@ const MenuOverlay = ({ setOverlay, overlay }: NavbarProps) => {
                 <div className={styles.MenuOverlayContent}>
 
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="#Directions">Anfahrt</a>
+                        <a onClick={() => setOverlay(!overlay)} href="/#Directions">Anfahrt</a>
                     </div>
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="#Pricing">Preise</a>
+                        <a onClick={() => setOverlay(!overlay)} href="/#Pricing">Preise</a>
                     </div>
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="#Team">Team</a>
+                        <a onClick={() => setOverlay(!overlay)} href="/#Team">Team</a>
                     </div>
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="#Footer">Öffnungszeiten</a>
+                        <a onClick={() => setOverlay(!overlay)} href="/#Footer">Öffnungszeiten</a>
                     </div>
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="#Footer">Kontakt</a>
+                        <a onClick={() => setOverlay(!overlay)} href="/#Footer">Kontakt</a>
                     </div>
 
                 </div>
