@@ -1,0 +1,62 @@
+.Team {
+  color: #f8f8f8;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 10;
+  background-color: #434499;
+}
+
+.Team h1 {
+  padding-top: 40px;
+  margin-top: 0px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.Galarie {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.Galarie div {
+  flex-basis: 30%;
+  position: relative;
+  text-align: center;
+}
+
+.Galarie img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+
+.Galarie div:hover img {
+  filter: brightness(50%);
+}
+
+.Galarie div:hover .overlayText {
+  opacity: 1;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.overlayText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5em;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Galarie div:hover .overlayText {
+  opacity: 1;
+}

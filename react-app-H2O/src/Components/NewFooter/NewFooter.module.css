@@ -1,5 +1,6 @@
 .NewFooter {
   font-family: 'Poppins', sans-serif;
+  z-index: -10;
 }
 
 .footer {
@@ -11,9 +12,9 @@
 }
 
 .footer hr {
-  margin-left: 300px;
-  margin-right: 300px;
-  border-color: #ffffff34;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-color: #FFF;
   border-style: solid;
   border-width: 1px;
 }
@@ -24,6 +25,7 @@
   margin: 0;
   text-align: center;
   color: #FFF;
+
 }
 
 .footer a {
@@ -58,9 +60,9 @@
 }
 
 .blackbar {
-  height: 250px;
-  background: #111;
+  height: 500px;
+  background: #00315A;
   left: 0;
   bottom: 0;
-  z-index: -100;
+  z-index: -1;
 }

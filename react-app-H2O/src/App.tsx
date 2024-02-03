@@ -5,17 +5,35 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Components/Home/Home';
-import Footer from './Components/Footer/Footer';
+
 import Imprint from './Components/Imprint/Imprint'
 import Navbar from './Components/Navbar/Navbar';
-import Experimental from './Components/Experimental/Experimental';
-import TheIdea from './Components/TheIdea/TheIdea';
+
 import NewFooter from './Components/NewFooter/NewFooter';
-import Orbit from './Components/test/Orbit';
-import MarsRetrogradeAnimation from './Components/MarsRetrogradeAnimation/MarsRetrogradeAnimation';
+import DataSecurity from './Components/DataSecurity/DataSecurity';
+
+
+import Couch from './Assats/Images/Couch.png';
+import Counter from './Assats/Images/Counter.jpg'
+import Door from './Assats/Images/Door.jpg'
+import React from 'react';
+import MenuOverlay from './Components/MenuOverlay/MenuOverlay';
+
+
+
 
 function App() {
+  const [overlay, setOverlay] = React.useState(false);
+  const [showOverlay, setShowOverlay] = React.useState(false);
 
+  // Trigger the fade-out animation and delay the removal
+  React.useEffect(() => {
+    if (!overlay) {
+      setTimeout(() => setShowOverlay(false), 300); // 300ms matches the CSS animation duration
+    } else {
+      setShowOverlay(true);
+    }
+  }, [overlay]);
 
   return (
     <BrowserRouter>
@@ -23,43 +41,36 @@ function App() {
         <Route path="/"
           element={
             <>
-              <Experimental />
+              <Navbar setOverlay={setOverlay} overlay={overlay} />
+
+              <Home overlay={overlay} />
+              {showOverlay &&
+                <MenuOverlay setOverlay={setOverlay} overlay={overlay} />
+              }
             </>
           }
         />
+
         <Route
           path="/Impressum"
           element={
             <>
-              <Navbar />
+              <Navbar setOverlay={setOverlay} overlay={overlay} />
               <Imprint />
             </>
           }
         />
-        <Route path="/old"
+        <Route
+          path="/Datenschutz"
           element={
             <>
-              <Home />
-              <Footer />
+              <Navbar setOverlay={setOverlay} overlay={overlay} />
+              <DataSecurity />
             </>
           }
         />
-        <Route path="/DieIdee"
-          element={
-            <>
-              <Navbar />
-              <TheIdea />
-              <NewFooter />
-            </>
-          }
-        />
-        <Route path="/test"
-          element={
-            <>
-              <MarsRetrogradeAnimation />
-            </>
-          }
-        />
+
+
       </Routes>
     </BrowserRouter>
   );
