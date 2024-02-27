@@ -362,68 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiMainPageBilderMainPageBilder extends Schema.SingleType {
-  collectionName: 'main_page_bilders';
-  info: {
-    singularName: 'main-page-bilder';
-    pluralName: 'main-page-bilders';
-    displayName: 'Main_Page_Bilder';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Bilder: Attribute.Media;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::main-page-bilder.main-page-bilder',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::main-page-bilder.main-page-bilder',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiUrlaubsnachrichtUrlaubsnachricht extends Schema.SingleType {
-  collectionName: 'urlaubsnachrichts';
-  info: {
-    singularName: 'urlaubsnachricht';
-    pluralName: 'urlaubsnachrichts';
-    displayName: 'Urlaubsnachricht';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Nachricht: Attribute.Text;
-    Nachricht_Anzeigen: Attribute.Boolean;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::urlaubsnachricht.urlaubsnachricht',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::urlaubsnachricht.urlaubsnachricht',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -845,6 +783,68 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiMainPageBilderMainPageBilder extends Schema.SingleType {
+  collectionName: 'main_page_bilders';
+  info: {
+    singularName: 'main-page-bilder';
+    pluralName: 'main-page-bilders';
+    displayName: 'Main_Page_Bilder';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Bilder: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::main-page-bilder.main-page-bilder',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::main-page-bilder.main-page-bilder',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiUrlaubsnachrichtUrlaubsnachricht extends Schema.SingleType {
+  collectionName: 'urlaubsnachrichts';
+  info: {
+    singularName: 'urlaubsnachricht';
+    pluralName: 'urlaubsnachrichts';
+    displayName: 'Urlaubsnachricht';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Nachricht: Attribute.Text;
+    Nachricht_Anzeigen: Attribute.Boolean;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::urlaubsnachricht.urlaubsnachricht',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::urlaubsnachricht.urlaubsnachricht',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -855,8 +855,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::main-page-bilder.main-page-bilder': ApiMainPageBilderMainPageBilder;
-      'api::urlaubsnachricht.urlaubsnachricht': ApiUrlaubsnachrichtUrlaubsnachricht;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -865,6 +863,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::main-page-bilder.main-page-bilder': ApiMainPageBilderMainPageBilder;
+      'api::urlaubsnachricht.urlaubsnachricht': ApiUrlaubsnachrichtUrlaubsnachricht;
     }
   }
 }
