@@ -83,3 +83,19 @@
   color: #FFF;
 
 }
+
+@media (max-width: 768px) {
+
+  .footerContent h1,
+  .footerContent h2,
+  .footerContent p {
+    font-size: 0.7em;
+    /* Adjust the font size as needed */
+  }
+
+  .blackbar {
+    height: 420px;
+
+  }
+
+}

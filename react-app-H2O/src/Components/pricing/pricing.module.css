@@ -32,3 +32,12 @@ h1 {
   padding-top: 40px;
   font-size: small;
 }
+
+@media (max-width: 768px) {
+
+  .pricingContainer {
+    padding: 30px;
+  }
+
+
+}

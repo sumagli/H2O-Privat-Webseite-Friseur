@@ -1,0 +1,33 @@
+.imprint h1 {
+  margin-top: 100px;
+  font-size: 2em;
+  text-align: center;
+}
+
+.imprint h2 {
+  padding-top: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.imprint p {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.imprint {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.imprint a {
+  text-decoration: none;
+  color: #424E85;
+}
+
+.imprint a:visited {
+  color: #424E85;
+}

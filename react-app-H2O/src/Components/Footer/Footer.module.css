@@ -1,0 +1,146 @@
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 30px 0;
+  text-align: right;
+  padding-right: 520px;
+}
+
+.footer a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ccc;
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    height: 10vh;
+  }
+}
+
+.home {
+  background: url('../../Assats/Images/Background.png') no-repeat center center;
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.home a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home a:visited {
+  color: inherit;
+}
+
+.home h1 {
+  font-size: 180px;
+  margin-bottom: 10px;
+  background-image: linear-gradient(358deg, #e0ecff, #3737ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.bottom-right p {
+  color: #fff;
+  font-size: 38px;
+  letter-spacing: 6.5px;
+  margin-top: -72px;
+}
+
+.top-left {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-size: 38px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 60px;
+  right: 150px;
+
+}
+
+.light-blue {
+  color: #6772a5;
+}
+
+.light-blueSmall {
+  color: #7e80a7;
+  font-size: 38px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  .bottom-right {
+    right: 10px;
+    left: 10px;
+    font-size: 18px;
+    bottom: 10px;
+  }
+
+  .light-blueSmall {
+    font-size: 18px;
+    right: 10px;
+    left: 10px;
+  }
+
+  .light-blue {
+    font-size: 18px;
+    right: 10px;
+    left: 10px;
+  }
+
+  .home h1 {
+    font-size: 75px;
+    left: 10px;
+    margin-bottom: 50px;
+  }
+
+  .top-left {
+    left: 30px;
+  }
+
+  .home {
+    height: 85vh;
+  }
+
+  .bottom-right p {
+    font-size: 18px;
+    left: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}

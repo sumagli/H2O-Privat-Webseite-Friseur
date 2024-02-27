@@ -19,12 +19,12 @@ const NewFooter = ({ mainPage }: FooterProps) => {
             <h3>Seitenmenü:</h3>
             {(mainPage) &&
               <div>
-                <a href="/#Directions">Anfahrt</a><br />
-                <a href="/#Pricing">Preise</a><br />
-                <a href="/#Team">Team</a><br /> <br />
+                <a href="#Directions">Anfahrt</a><br />
+                <a href="#Pricing">Preise</a><br />
+                <a href="#Team">Team</a><br /> <br />
               </div>
             }
-            <a href="/Impressum">Impressum</a><br />
+            <a href="/Impressum2">Impressum</a><br />
             <a href="/Datenschutz">Datenschutz</a>
           </div>
           <div className={styles.openingTimes}>

@@ -21,14 +21,23 @@
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
-  background: #00315A;
   color: white;
 }
 
-
+.Background {
+  background: #00315A;
+}
 
 .TopPart {
   display: flex;
   justify-content: center;
   gap: 10%;
+}
+
+@media (max-width: 768px) {
+  .TopPart {
+    flex-direction: column;
+  }
+
+
 }

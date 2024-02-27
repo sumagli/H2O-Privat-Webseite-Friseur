@@ -12,17 +12,18 @@ import { Link } from 'react-router-dom'; // Make sure you've installed react-rou
 
 import team from '../../Assats/Images/team.jpg';
 import Iris from '../../Assats/Images/Iris.png'
-import Sabiene from '../../Assats/Images/Sabiene.png'
+import Sabine from '../../Assats/Images/Sabiene.png'
 import Ilona from '../../Assats/Images/Ilona.png'
+
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 
 const SlideshowTeam = ({ overlay, isVisible }) => {
     const images = [
-        { imgPath: team, upperTitle: "", title: "User Team", subTitle: "", buttonText: "", link: "/Vita-Iris" },
+        { imgPath: team, upperTitle: "", title: "Unser Team", subTitle: "", buttonText: "", link: "/Vita-Iris" },
         { imgPath: Iris, upperTitle: "", title: "Iris", subTitle: "Friseurmeisterin", buttonText: "Vita Iris", link: "/Vita-Iris" },
-        { imgPath: Sabiene, upperTitle: "", title: "Sabiene", subTitle: "Friseurmeisterin", buttonText: "Vita Sabine", link: "/Vita-Sabiene" },
+        { imgPath: Sabine, upperTitle: "", title: "Sabine", subTitle: "Friseurmeisterin", buttonText: "Vita Sabine", link: "/Vita-Sabiene" },
         { imgPath: Ilona, upperTitle: "", title: "Ilona", subTitle: "Friseurmeisterin & Fotografin", buttonText: "Vita Ilona", link: "/Vita-Ilona" },
     ];
 
@@ -105,7 +106,9 @@ const SlideshowTeam = ({ overlay, isVisible }) => {
             </div>
 
 
+
             <div className={styles.textContent}>
+
                 <div
                     className={`${styles.uperTitle} ${isVisible ? styles.animateonvisibleuperTitle : styles.animateOutUperTitle}`}
                 >
@@ -130,8 +133,7 @@ const SlideshowTeam = ({ overlay, isVisible }) => {
                     </Link>
                 }
             </div>
-
-
+            <div className={styles.PhotoBy}>Foto: Ilona Scheffbuch</div>
         </Box >
     );
 }

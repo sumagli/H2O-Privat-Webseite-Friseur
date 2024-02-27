@@ -17,8 +17,13 @@ import Vita from './Components/Vita/Vita';
 
 import Iris from './Assats/Images/Iris.png';
 import Sabiene from './Assats/Images/Sabiene.png';
+
 import Ilona from './Assats/Images/Ilona.png';
 import NewFooter from './Components/NewFooter/NewFooter';
+import Home2 from './Components/Home copy/Home';
+import Imprint2 from './Components/Imprint copy/Imprint';
+import Navbar2 from './Components/Navbar copy/Navbar';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -93,7 +98,24 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route path="/"
+          element={
+            <>
+              <Home2 />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/Impressum"
+          element={
+            <>
+              <Navbar2 />
+              <Imprint2 />
+            </>
+          }
+        />
+        <Route path="/h2o"
           element={
             <>
               <Navbar mainPage={true} setOverlay={setOverlay} overlay={overlay} />
@@ -107,7 +129,7 @@ function App() {
         />
 
         <Route
-          path="/Impressum"
+          path="/Impressum2"
           element={
             <>
               <Navbar mainPage={false} setOverlay={setOverlay} overlay={overlay} />
@@ -121,6 +143,7 @@ function App() {
             <>
               <Navbar mainPage={false} setOverlay={setOverlay} overlay={overlay} />
               <DataSecurity />
+
 
             </>
           }

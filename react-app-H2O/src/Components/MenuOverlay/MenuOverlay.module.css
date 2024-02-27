@@ -91,3 +91,11 @@
     height: 100%;
     z-index: 1000;
 }
+
+@media (max-width: 768px) {
+
+    .MenuOverlay {
+        width: 100%;
+    }
+
+}

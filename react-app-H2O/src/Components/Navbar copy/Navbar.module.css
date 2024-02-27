@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}

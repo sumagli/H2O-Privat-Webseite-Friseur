@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { HashRouter as Router, Link } from 'react-router-dom'; // Import HashRouter and Link
 import styles from './MenuOverlay.module.css';
 import { MdClose } from "react-icons/md";
 
@@ -16,26 +17,33 @@ const MenuOverlay = ({ setOverlay, overlay }: NavbarProps) => {
         }
     }, [overlay]);
 
+    const handleLinkClick = () => {
+        setOverlay(!overlay);
+    };
+
     return (
         <div>
             <div className={`${styles.MenuOverlay} ${overlay ? styles.open : styles.closed}`}>
                 <div className={styles.MenuOverlayContent}>
 
+                    {/* Use the Link component for navigation */}
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="/#Directions">Anfahrt</a>
+                        <a href="#Directions" onClick={handleLinkClick}>Anfahrt</a><br />
                     </div>
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="/#Pricing">Preise</a>
+                        <a href="#Pricing" onClick={handleLinkClick}>Preise</a><br />
                     </div>
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="/#Team">Team</a>
+                        <a href="#Team" onClick={handleLinkClick}>Team</a><br />
                     </div>
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="/#Footer">Öffnungszeiten</a>
+                        <a href="#Footer" onClick={handleLinkClick}>Öffnungszeiten</a><br />
                     </div>
                     <div className={styles.MenuOverlayContentItem}>
-                        <a onClick={() => setOverlay(!overlay)} href="/#Footer">Kontakt</a>
+                        <a href="#Footer" onClick={handleLinkClick}>Kontakt</a><br />
                     </div>
+
+
 
                 </div>
                 <div className={styles.MenuOverlayIcon}>
@@ -44,7 +52,6 @@ const MenuOverlay = ({ setOverlay, overlay }: NavbarProps) => {
             </div>
             <div className={styles.MenuOverlayRight} onClick={() => setOverlay(!overlay)}></div>
         </div>
-
     );
 };
 

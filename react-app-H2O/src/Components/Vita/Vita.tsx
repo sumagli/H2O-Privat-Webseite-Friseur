@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Vita.module.css';
 import "../../Assats//Fonts/Fonts.css"
-import SwipeableTextMobileStepper from '../Slideshow/Slideshow';
-import test from '../../Assats/Images/Iris.png'
+import VitaPages from './VitaPages/VitaPages';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 
@@ -27,7 +26,7 @@ const Vita = ({ email, name, profession, image, timelineEvents }: any) => {
         <div className={styles.Container}>
             <ThemeProvider theme={theme}>
 
-                <SwipeableTextMobileStepper
+                <VitaPages
                     showButtonText={false}
                     uperTitle={email}
                     title={name}
@@ -36,7 +35,6 @@ const Vita = ({ email, name, profession, image, timelineEvents }: any) => {
                     images={image}
                     isVisible={true}
                     blur={true}
-                    overlay={false}
                     textPositionDown={true}
                 />
                 <div className={styles.scrolldownIndicator}></div>
@@ -65,12 +63,12 @@ const Vita = ({ email, name, profession, image, timelineEvents }: any) => {
                 </div>
                 <div className={styles.test} />
 
-                <h2 className={styles.h2} >Wir freunen uns auf ihren Besuch</h2>
-
-
-                <NewFooter mainPage={false} />
-
+                <h2 className={styles.h2} >Wir freuen uns auf ihren Besuch</h2>
             </ThemeProvider>
+
+            <NewFooter mainPage={false} />
+
+
         </div>
     );
 };
