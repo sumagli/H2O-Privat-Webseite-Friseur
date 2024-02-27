@@ -1,8 +1,5 @@
 import styles from './Home.module.css';
-import React, { useRef } from 'react';
-
 import "../../Assats//Fonts/Fonts.css"
-
 import Directions from '../Directions/Directions';
 import MainPage from '../MainPage/MainPage';
 import NewFooter from '../NewFooter/NewFooter';

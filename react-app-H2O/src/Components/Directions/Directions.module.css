@@ -32,7 +32,6 @@
   height: 450px;
 }
 
-/* Add this media query for screens smaller than 768px */
 @media (max-width: 768px) {
   .DirectionsBody {
     flex-direction: column;
@@ -41,10 +40,6 @@
   .DirectionsBody p,
   .DirectionsBody iframe {
     flex-basis: auto;
-    /* Resetting flex-basis so they take up the needed space */
     width: 90%;
-    /* Ensuring they take the full width of the container */
-
-    /* Adjust padding as needed */
   }
 }

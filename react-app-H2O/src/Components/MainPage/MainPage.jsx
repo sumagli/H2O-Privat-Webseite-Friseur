@@ -1,12 +1,8 @@
 import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton'; // Use IconButton for direct icon interaction
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
 import { autoPlay } from 'react-swipeable-views-utils';
-import MobileStepper from '@mui/material/MobileStepper';
 import styles from './MainPage.module.css';
 import LogoGesicht1 from '../../Assats/Images/LogoGesicht1.png';
 import LogoGesicht2 from '../../Assats/Images/LogoGesicht2.png';
@@ -15,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import test33 from '../../Assats/Images/3dark.jpg';
 import test44 from '../../Assats/Images/4dark.jpg';
 import test55 from '../../Assats/Images/5dark.jpg';
+import useVacationMessage from '../../Helper/service.ts';
 
 
 
@@ -24,11 +21,13 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const MainPage = ({ isVisible, blur }) => {
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
+    const vacationMessage = useVacationMessage();
     const images = [
         { imgPath: test33 },
         { imgPath: test44 },
         { imgPath: test55 },
     ];
+
 
     return (
         <Box className={styles.slideshowContainer}>
@@ -96,15 +95,15 @@ const MainPage = ({ isVisible, blur }) => {
 
             </div>
             <div className={styles.PhotoBy}>Foto: Ilona Scheffbuch</div>
-
-            <Box
-                className={styles.vacationBox}
-
-            >
-                <Typography variant="body1" component="div" sx={{ textAlign: 'center', fontWeight: 'bold' }}>
-                    Wir machen Urlaub, das Geschäft ist vom 19.08.2023 - 04.09.23 geschlossen.
-                </Typography>
-            </Box>
+            {vacationMessage.showMessage &&
+                <Box
+                    className={styles.vacationBox}
+                >
+                    <Typography variant="body1" component="div" sx={{ textAlign: 'center', fontWeight: 'bold' }}>
+                        {vacationMessage.message}
+                    </Typography>
+                </Box>
+            }
         </Box>
     );
 }

@@ -43,8 +43,6 @@ const MenuOverlay = ({ setOverlay, overlay }: NavbarProps) => {
                         <a href="#Footer" onClick={handleLinkClick}>Kontakt</a><br />
                     </div>
 
-
-
                 </div>
                 <div className={styles.MenuOverlayIcon}>
                     <MdClose color='white' onClick={() => setOverlay(!overlay)} />
