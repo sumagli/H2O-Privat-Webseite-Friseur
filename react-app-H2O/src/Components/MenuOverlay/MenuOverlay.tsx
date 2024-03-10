@@ -6,6 +6,7 @@ import { MdClose } from "react-icons/md";
 interface NavbarProps {
     setOverlay: (overlay: boolean) => void;
     overlay: boolean;
+
 }
 
 const MenuOverlay = ({ setOverlay, overlay }: NavbarProps) => {

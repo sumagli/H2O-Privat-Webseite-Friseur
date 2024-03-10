@@ -10,21 +10,15 @@ import MobileStepper from '@mui/material/MobileStepper';
 import styles from './SlideshowTeam.module.css';
 import { Link } from 'react-router-dom'; // Make sure you've installed react-router-dom
 
-import team from '../../Assats/Images/team.jpg';
-import Iris from '../../Assats/Images/Iris.png'
-import Sabine from '../../Assats/Images/Sabiene.png'
-import Ilona from '../../Assats/Images/Ilona.png'
-
-
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 
-const SlideshowTeam = ({ overlay, isVisible }) => {
+const SlideshowTeam = ({ overlay, isVisible, teamImages }) => {
     const images = [
-        { imgPath: team, upperTitle: "", title: "Unser Team", subTitle: "", buttonText: "", link: "/Vita-Iris" },
-        { imgPath: Iris, upperTitle: "", title: "Iris", subTitle: "Friseurmeisterin", buttonText: "Vita Iris", link: "/Vita-Iris" },
-        { imgPath: Sabine, upperTitle: "", title: "Sabine", subTitle: "Friseurmeisterin", buttonText: "Vita Sabine", link: "/Vita-Sabiene" },
-        { imgPath: Ilona, upperTitle: "", title: "Ilona", subTitle: "Friseurmeisterin & Fotografin", buttonText: "Vita Ilona", link: "/Vita-Ilona" },
+        { imgPath: teamImages.ImageUrls[0], upperTitle: "", title: "Unser Team", subTitle: "", buttonText: "", link: "/Vita-Iris" },
+        { imgPath: teamImages.ImageUrls[1], upperTitle: "", title: "Iris", subTitle: "Friseurmeisterin", buttonText: "Vita Iris", link: "/Vita-Iris" },
+        { imgPath: teamImages.ImageUrls[2], upperTitle: "", title: "Sabine", subTitle: "Friseurmeisterin", buttonText: "Vita Sabine", link: "/Vita-Sabine" },
+        { imgPath: teamImages.ImageUrls[3], upperTitle: "", title: "Ilona", subTitle: "Friseurmeisterin & Fotografin", buttonText: "Vita Ilona", link: "/Vita-Ilona" },
     ];
 
     const theme = useTheme();

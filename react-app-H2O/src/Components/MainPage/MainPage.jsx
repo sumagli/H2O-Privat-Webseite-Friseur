@@ -7,26 +7,21 @@ import styles from './MainPage.module.css';
 import LogoGesicht1 from '../../Assats/Images/LogoGesicht1.png';
 import LogoGesicht2 from '../../Assats/Images/LogoGesicht2.png';
 import LogoGesicht3 from '../../Assats/Images/LogoGesicht3.png';
+import test from '../../Assats/Images/5dark.jpg';
 import Typography from '@mui/material/Typography';
-import test33 from '../../Assats/Images/3dark.jpg';
-import test44 from '../../Assats/Images/4dark.jpg';
-import test55 from '../../Assats/Images/5dark.jpg';
-import useVacationMessage from '../../Helper/service.ts';
+import { useVacationMessage, useMainPageImages } from '../../Helper/service.ts';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-
 const MainPage = ({ isVisible, blur }) => {
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
     const vacationMessage = useVacationMessage();
-    const images = [
-        { imgPath: test33 },
-        { imgPath: test44 },
-        { imgPath: test55 },
-    ];
+    const { ImageUrls } = useMainPageImages();
+
 
 
     return (
@@ -38,13 +33,14 @@ const MainPage = ({ isVisible, blur }) => {
                 enableMouseEvents
                 interval={5000}
             >
-                {images.map((step, index) => (
+                {ImageUrls.map((imageUrl, index) => (
                     <div key={index}>
                         <Box
                             component="img"
-                            className={`${styles.imageBox}`}
-                            src={step.imgPath}
+                            className={`${styles.imageBox}`} // Apply blurEffect class conditionally
+                            src={imageUrl}
                             alt={`Image ${index}`}
+
                         />
                     </div>
                 ))}
@@ -67,7 +63,7 @@ const MainPage = ({ isVisible, blur }) => {
                 <div
                     className={`${styles.centeredText} ${isVisible ? styles.animateonvisiblecenteredText : styles.animateOutCenteredText}`}
                 >
-                    {"Haar Zwei Ohh!"}
+                    {"Haar Zwei Ooh!"}
                 </div>
                 <div
                     className={`${styles.subTitle} ${isVisible ? styles.animateonvisiblesubTitle : styles.animateOutSubTitle}`}

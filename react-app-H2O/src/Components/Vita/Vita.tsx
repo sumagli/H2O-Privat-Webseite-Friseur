@@ -32,10 +32,10 @@ const Vita = ({ email, name, profession, image, timelineEvents }: any) => {
                     title={name}
                     subTitle={profession}
                     buttonText={"undefined"}
-                    images={image}
                     isVisible={true}
                     blur={true}
                     textPositionDown={true}
+                    imageUrl={image}
                 />
                 <div className={styles.scrolldownIndicator}></div>
 

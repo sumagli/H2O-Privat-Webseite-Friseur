@@ -47,7 +47,7 @@ const Navbar = ({ setOverlay, overlay, mainPage }: NavbarProps) => {
           }
 
           <li>
-            <a href="/h2o" className={styles.iconLink}>
+            <a href="/" className={styles.iconLink}>
               <FaHome color='white' />
             </a>
           </li>

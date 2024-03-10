@@ -8,9 +8,10 @@ import SlideshowTeam from '../SlideshowTeam/SlideshowTeam';
 
 interface HomeProps {
     overlay: boolean;
+    teamImages: any
 }
 
-export default function Home({ overlay }: HomeProps) {
+export default function Home({ overlay, teamImages }: HomeProps) {
     return (
         <div className={styles.home}>
             <div id='Home'>
@@ -23,7 +24,7 @@ export default function Home({ overlay }: HomeProps) {
                 <Pricing />
             </div>
             <div id='Team'>
-                <SlideshowTeam overlay={overlay} isVisible={true} />
+                <SlideshowTeam overlay={overlay} isVisible={true} teamImages={teamImages} />
             </div>
             <div id='Footer'>
                 <NewFooter mainPage={true} />

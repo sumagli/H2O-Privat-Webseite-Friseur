@@ -1,11 +1,5 @@
 import styles from './Directions.module.css';
-
 import "../../Assats//Fonts/Fonts.css"
-
-import Couch from '../../Assats/Images/Couch.png'
-import Counter from '../../Assats/Images/Counter.jpg'
-import Door from '../../Assats/Images/Door.jpg'
-import Mirrors from '../../Assats/Images/Mirrors.png'
 
 
 
@@ -22,10 +16,6 @@ export default function Directions() {
                     Unser Salon ist optimal mit öffentlichen Verkehrsmitteln erreichbar.
                     Fahren Sie hierfür mit den Linien U1, U2, U4, U9 oder U14 bis zur Haltestelle Stöckach.
                     Vom Hauptbahnhof Stuttgart erreichen Sie uns in nur 5 Minuten.
-                    <br />
-                    <br />
-                    Für die Anreise mit dem Auto stehen Parkmöglichkeiten direkt gegenüber unserem
-                    Friseursalon am Stöckachplatz zur Verfügung.
                 </p>
 
                 <iframe
