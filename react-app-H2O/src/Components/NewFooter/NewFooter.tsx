@@ -3,6 +3,7 @@ import styles from './NewFooter.module.css';
 import "../../Assats/Fonts/Fonts.css"; // Corrected the typo in the path
 import { FaInstagram } from "react-icons/fa";
 import { useOpeningTimes } from '../../Helper/service';
+import { Helmet } from 'react-helmet';
 
 interface FooterProps {
   mainPage: boolean;
@@ -13,6 +14,10 @@ const NewFooter = ({ mainPage }: FooterProps) => {
 
   return (
     <div className={styles.NewFooter} >
+      <Helmet>
+        <title>Willkommen bei HAAR ZWEI OOH! - Ihr Friseursalon in Stuttgart</title>
+        <meta name="description" content= "Öffnungszeiten. Folgen Sie uns auf Instagram für die neuesten Trends." />
+      </Helmet>
       <div className={`${mainPage ? styles.blackbar : ''}`} />
       <div className={`${styles.footer} ${!mainPage ? styles.footerNotFixed : ''}`} >
         <h1 style={{ paddingBottom: `30px` }}>HAAR ZWEI OOH!</h1>

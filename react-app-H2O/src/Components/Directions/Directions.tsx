@@ -1,6 +1,6 @@
 import styles from './Directions.module.css';
 import "../../Assats//Fonts/Fonts.css"
-
+import { Helmet } from 'react-helmet';
 
 
 export default function Directions() {
@@ -8,15 +8,22 @@ export default function Directions() {
 
     return (
         <div className={styles.Directions}>
+             <Helmet>
+                <title>Anfahrt zu Haar Zwei Ooh! - Ihr Weg zu uns in Stuttgart</title>
+                <meta name="description" content="So finden Sie den Weg zu Haar Zwei Ooh! in Stuttgart Ost. Unser Salon ist bequem mit öffentlichen Verkehrsmitteln erreichbar. Besuchen Sie uns für ein einzigartiges Friseurerlebnis." />
+                <meta name="keywords" content="Anfahrt Haar Zwei Ooh, Stuttgart Friseur, Öffentliche Verkehrsmittel, Hackstraße Stuttgart" />
+            </Helmet>
             <h1>Anfahrt</h1>
 
             <div className={styles.DirectionsBody}>
-                <p>
+                <div className={styles.leftPart}>
                     <h2>Hackstraße 22, 70190 Stuttgart</h2>
-                    Unser Salon ist optimal mit öffentlichen Verkehrsmitteln erreichbar.
-                    Fahren Sie hierfür mit den Linien U1, U2, U4, U9 oder U14 bis zur Haltestelle Stöckach.
-                    Vom Hauptbahnhof Stuttgart erreichen Sie uns in nur 5 Minuten.
-                </p>
+                    <p>
+                        Unser Salon ist optimal mit öffentlichen Verkehrsmitteln erreichbar.
+                        Fahren Sie hierfür mit den Linien U1, U2, U4, U9 oder U14 bis zur Haltestelle Stöckach.
+                        Vom Hauptbahnhof Stuttgart erreichen Sie uns in nur 5 Minuten.
+                    </p>
+                </div>
 
                 <iframe
                     title="Shop Location"

@@ -11,6 +11,7 @@ import test from '../../Assats/Images/5dark.jpg';
 import Typography from '@mui/material/Typography';
 import { useVacationMessage, useMainPageImages } from '../../Helper/service.ts';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Helmet } from 'react-helmet';
 
 
 
@@ -26,6 +27,11 @@ const MainPage = ({ isVisible, blur }) => {
 
     return (
         <Box className={styles.slideshowContainer}>
+            <Helmet>
+                <title>Haar Zwei Ooh! - Ihr Friseur in Stuttgart Ost</title>
+                <meta name="description" content="Haar Zwei Ooh!, Ihr Friseur in Stuttgart Ost. Erleben Sie individuelle Beratung, professionelle Haarschnitte und Styling." />
+                <meta name="keywords" content="Friseur, Stuttgart Ost, Haarschnitt, Styling, Haarpflege" />
+            </Helmet>
             <AutoPlaySwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}

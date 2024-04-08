@@ -13,6 +13,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import NewFooter from '../NewFooter/NewFooter';
+import { Helmet } from 'react-helmet';
 
 const Vita = ({ email, name, profession, image, timelineEvents }: any) => {
 
@@ -24,6 +25,10 @@ const Vita = ({ email, name, profession, image, timelineEvents }: any) => {
 
     return (
         <div className={styles.Container}>
+            <Helmet>
+                <title>{`Vita - ${name} | ${profession}`}</title>
+                <meta name="description" content={`Erfahren Sie mehr über ${name}, unsere/n ${profession} bei HAAR ZWEI OOH!. Lesen Sie die Vita und beruflichen Meilensteine.`} />
+            </Helmet>
             <ThemeProvider theme={theme}>
 
                 <VitaPages

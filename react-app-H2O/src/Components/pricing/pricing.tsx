@@ -4,7 +4,7 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
+import { Helmet } from 'react-helmet';
 import TableRow from '@mui/material/TableRow';
 import theme from './theme';
 import { ThemeProvider } from '@mui/material/styles';
@@ -19,6 +19,11 @@ const Pricing = ({ data }: any) => {
 
     return (
         <ThemeProvider theme={theme}>
+            <Helmet>
+                <title>Haar Zwei Ooh! Preisliste - Unsere Dienstleistungen und Preise</title>
+                <meta name="description" content="Entdecken Sie unsere transparente Preisliste für Damen, Herren und Kinder. Haar Zwei Ooh! bietet Ihnen erstklassige Friseurdienstleistungen zu fairen Preisen in Stuttgart." />
+                <meta name="keywords" content="Friseurpreise, Damen Haarschnitt, Herren Haarschnitt, Kinder Haarschnitt, Preisliste Friseur" />
+            </Helmet>
             <div className={styles.pricingContainer}>
                 <h1>Preisliste</h1>
                 {/* Women Pricing */}

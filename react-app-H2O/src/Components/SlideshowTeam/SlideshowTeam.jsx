@@ -9,6 +9,7 @@ import { autoPlay } from 'react-swipeable-views-utils';
 import MobileStepper from '@mui/material/MobileStepper';
 import styles from './SlideshowTeam.module.css';
 import { Link } from 'react-router-dom'; // Make sure you've installed react-router-dom
+import { Helmet } from 'react-helmet';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -35,6 +36,11 @@ const SlideshowTeam = ({ overlay, isVisible, teamImages }) => {
 
     return (
         <Box className={styles.slideshowContainer}>
+            <Helmet>
+                <title>Unser Team - Haar Zwei Ooh! Friseursalon</title>
+                <meta name="description" content="Lernen Sie das kreative Team von Haar Zwei Ooh! kennen. Unsere erfahrenen Friseurmeisterinnen Iris, Sabine und Ilona freuen sich darauf, Sie zu verwöhnen und zu beraten." />
+                <meta name="keywords" content="Haar Zwei Ooh Team, Friseurmeister Stuttgart, Friseursalon Team, Friseure Stuttgart" />
+            </Helmet>
             <AutoPlaySwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={activeStep}
