@@ -18,6 +18,8 @@ const MenuOverlay = ({ setOverlay, overlay }: NavbarProps) => {
         }
     }, [overlay]);
 
+    
+
     const handleLinkClick = () => {
         setOverlay(!overlay);
     };
