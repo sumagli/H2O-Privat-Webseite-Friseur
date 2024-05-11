@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import styles from './Navbar.module.css';
+import React, { useState, useEffect } from "react";
+import styles from "./Navbar.module.css";
 import { BiMenu } from "react-icons/bi";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { FaHome } from "react-icons/fa";
+import { BsFillHouseDoorFill } from "react-icons/bs";
 
 interface NavbarProps {
   setOverlay: (overlay: boolean) => void;
@@ -24,35 +24,39 @@ const Navbar = ({ setOverlay, overlay, mainPage }: NavbarProps) => {
     };
 
     // Set up the scroll listener for mainPage
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [mainPage]); // Add mainPage as a dependency
 
   return (
-    <div className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''} ${overlay ? styles.fadeOut : styles.fadeIn} `} >
+    <div
+      className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""} ${
+        overlay ? styles.fadeOut : styles.fadeIn
+      } `}
+    >
       <nav className={styles.topBar}>
         <ul>
-          {mainPage &&
+          {mainPage && (
             <li className={styles.pointer} onClick={() => setOverlay(!overlay)}>
-              <BiMenu color='white' />
+              <BiMenu color="white" />
               Menü
             </li>
-          }
-          {!mainPage &&
+          )}
+          {!mainPage && (
             // Render an invisible, non-interactive placeholder
             <div className={styles.placeholder}></div>
-          }
+          )}
 
           <li>
             <a href="/" className={styles.iconLink}>
-              <FaHome color='white' />
+              <BsFillHouseDoorFill color="white" />
             </a>
           </li>
           <li>
-            <BsFillTelephoneFill color='white' />
+            <BsFillTelephoneFill color="white" />
             <label> </label>0711 - 262 99 66
           </li>
         </ul>

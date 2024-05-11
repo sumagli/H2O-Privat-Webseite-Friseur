@@ -1,18 +1,19 @@
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home/Home";
+import Imprint from "./Components/Imprint/Imprint";
+import Navbar from "./Components/Navbar/Navbar";
+import DataSecurity from "./Components/DataSecurity/DataSecurity";
+import React from "react";
+import MenuOverlay from "./Components/MenuOverlay/MenuOverlay";
+import Vita from "./Components/Vita/Vita";
 import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-import Home from './Components/Home/Home';
-import Imprint from './Components/Imprint/Imprint'
-import Navbar from './Components/Navbar/Navbar';
-import DataSecurity from './Components/DataSecurity/DataSecurity';
-import React from 'react';
-import MenuOverlay from './Components/MenuOverlay/MenuOverlay';
-import Vita from './Components/Vita/Vita';
-import { useTeamImages, useVitaIris, useVitaSabine, useVitaIlona } from './Helper/service';
-
+  useTeamImages,
+  useVitaIris,
+  useVitaSabine,
+  useVitaIlona,
+} from "./Helper/service";
+import Credit from "./Components/Credit/Credit";
 
 function App() {
   const [overlay, setOverlay] = React.useState(false);
@@ -30,19 +31,23 @@ function App() {
     }
   }, [overlay]);
 
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/"
+        <Route
+          path="/"
           element={
             <>
-              <Navbar mainPage={true} setOverlay={setOverlay} overlay={overlay} />
+              <Navbar
+                mainPage={true}
+                setOverlay={setOverlay}
+                overlay={overlay}
+              />
 
               <Home teamImages={teamImages} overlay={overlay} />
-              {showOverlay &&
+              {showOverlay && (
                 <MenuOverlay setOverlay={setOverlay} overlay={overlay} />
-              }
+              )}
             </>
           }
         />
@@ -51,8 +56,25 @@ function App() {
           path="/Impressum"
           element={
             <>
-              <Navbar mainPage={false} setOverlay={setOverlay} overlay={overlay} />
+              <Navbar
+                mainPage={false}
+                setOverlay={setOverlay}
+                overlay={overlay}
+              />
               <Imprint />
+            </>
+          }
+        />
+        <Route
+          path="/Credits"
+          element={
+            <>
+              <Navbar
+                mainPage={false}
+                setOverlay={setOverlay}
+                overlay={overlay}
+              />
+              <Credit />
             </>
           }
         />
@@ -60,7 +82,11 @@ function App() {
           path="/Datenschutz"
           element={
             <>
-              <Navbar mainPage={false} setOverlay={setOverlay} overlay={overlay} />
+              <Navbar
+                mainPage={false}
+                setOverlay={setOverlay}
+                overlay={overlay}
+              />
               <DataSecurity />
             </>
           }
@@ -69,8 +95,18 @@ function App() {
           path="/Vita-Iris"
           element={
             <>
-              <Navbar mainPage={false} setOverlay={setOverlay} overlay={overlay} />
-              <Vita email={"iris.eiblmeier@t-online.de"} name={"Iris Eiblmeier"} profession={"Friseurmeisterin"} image={teamImages.ImageUrls[1]} timelineEvents={irisTimeline} />
+              <Navbar
+                mainPage={false}
+                setOverlay={setOverlay}
+                overlay={overlay}
+              />
+              <Vita
+                email={"iris.eiblmeier@t-online.de"}
+                name={"Iris Eiblmeier"}
+                profession={"Friseurmeisterin"}
+                image={teamImages.ImageUrls[1]}
+                timelineEvents={irisTimeline}
+              />
             </>
           }
         />
@@ -78,8 +114,18 @@ function App() {
           path="/Vita-Sabine"
           element={
             <>
-              <Navbar mainPage={false} setOverlay={setOverlay} overlay={overlay} />
-              <Vita email={"sabinegehlen2307@gmail.com"} name={"Sabine Gehlen-Teshome"} profession={"Friseurmeisterin"} image={teamImages.ImageUrls[2]} timelineEvents={sabieneTimeline} />
+              <Navbar
+                mainPage={false}
+                setOverlay={setOverlay}
+                overlay={overlay}
+              />
+              <Vita
+                email={"sabinegehlen2307@gmail.com"}
+                name={"Sabine Gehlen-Teshome"}
+                profession={"Friseurmeisterin"}
+                image={teamImages.ImageUrls[2]}
+                timelineEvents={sabieneTimeline}
+              />
             </>
           }
         />
@@ -87,13 +133,21 @@ function App() {
           path="/Vita-Ilona"
           element={
             <>
-              <Navbar mainPage={false} setOverlay={setOverlay} overlay={overlay} />
-              <Vita email={"ilona@foto-scheffbuch.de"} name={"Ilona Scheffbuch"} profession={"Friseurmeisterin & Fotografin"} image={teamImages.ImageUrls[3]} timelineEvents={ilonaTimeline} />
+              <Navbar
+                mainPage={false}
+                setOverlay={setOverlay}
+                overlay={overlay}
+              />
+              <Vita
+                email={"ilona@foto-scheffbuch.de"}
+                name={"Ilona Scheffbuch"}
+                profession={"Friseurmeisterin & Fotografin"}
+                image={teamImages.ImageUrls[3]}
+                timelineEvents={ilonaTimeline}
+              />
             </>
           }
         />
-
-
       </Routes>
     </BrowserRouter>
   );

@@ -1,9 +1,10 @@
-import React from 'react';
-import styles from './NewFooter.module.css';
+import React from "react";
+import styles from "./NewFooter.module.css";
 import "../../Assats/Fonts/Fonts.css"; // Corrected the typo in the path
 import { FaInstagram } from "react-icons/fa";
-import { useOpeningTimes } from '../../Helper/service';
-import { Helmet } from 'react-helmet';
+import { useOpeningTimes } from "../../Helper/service";
+import { Helmet } from "react-helmet";
+import { BsInstagram } from "react-icons/bs";
 
 interface FooterProps {
   mainPage: boolean;
@@ -13,27 +14,31 @@ const NewFooter = ({ mainPage }: FooterProps) => {
   const openingTimes = useOpeningTimes();
 
   return (
-    <div className={styles.NewFooter} >
-      <Helmet>
-        <title>Willkommen bei HAAR ZWEI OOH! - Ihr Friseursalon in Stuttgart</title>
-        <meta name="description" content= "Öffnungszeiten. Folgen Sie uns auf Instagram für die neuesten Trends." />
-      </Helmet>
-      <div className={`${mainPage ? styles.blackbar : ''}`} />
-      <div className={`${styles.footer} ${!mainPage ? styles.footerNotFixed : ''}`} >
+    <div className={styles.NewFooter}>
+      <div className={`${mainPage ? styles.blackbar : ""}`} />
+      <div
+        className={`${styles.footer} ${!mainPage ? styles.footerNotFixed : ""}`}
+      >
         <h1 style={{ paddingBottom: `30px` }}>HAAR ZWEI OOH!</h1>
         <hr />
         <div className={styles.footerContent}>
           <div className={styles.links}>
             <h3>Seitenmenü:</h3>
-            {(mainPage) &&
+            {mainPage && (
               <div>
-                <a href="#Directions">Anfahrt</a><br />
-                <a href="#Pricing">Preise</a><br />
-                <a href="#Team">Team</a><br /> <br />
+                <a href="#Directions">Anfahrt</a>
+                <br />
+                <a href="#Pricing">Preise</a>
+                <br />
+                <a href="#Team">Team</a>
+                <br /> <br />
               </div>
-            }
-            <a href="/Impressum">Impressum</a><br />
+            )}
+            <a href="/Impressum">Impressum</a>
+            <br />
             <a href="/Datenschutz">Datenschutz</a>
+            <br />
+            <a href="/Credits">Credits</a>
           </div>
           <div className={styles.openingTimes}>
             <h3>Öffnungszeiten:</h3>
@@ -46,8 +51,13 @@ const NewFooter = ({ mainPage }: FooterProps) => {
             <p>Hackstraße 22</p>
             <p>70190 Stuttgart</p>
             <p>0711 - 262 99 66</p>
-            <a href="https://www.instagram.com/haarzweiooh_stuttgart/" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
-              <FaInstagram color='white' size="32px" />
+            <a
+              href="https://www.instagram.com/haarzweiooh_stuttgart/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconLink}
+            >
+              <BsInstagram color="white" size="32px" />
             </a>
           </div>
         </div>
@@ -56,6 +66,6 @@ const NewFooter = ({ mainPage }: FooterProps) => {
       </div>
     </div>
   );
-}
+};
 
 export default NewFooter;
