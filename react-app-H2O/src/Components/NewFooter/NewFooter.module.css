@@ -1,6 +1,8 @@
 .NewFooter {
   font-family: 'Poppins', sans-serif;
   z-index: -10;
+  background-color: #00315A;
+
 }
 
 .footer {
@@ -9,6 +11,7 @@
   bottom: 0;
   width: 100%;
   z-index: 0;
+
 }
 
 .footerNotFixed {
@@ -40,9 +43,11 @@
 .footerContent {
   text-decoration: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   color: #FFF;
+  align-items: flex-start;
 }
 
 .fixed_footer {
@@ -74,28 +79,38 @@
 .iconLink {
   display: flex;
   align-items: center;
-  /* This will vertically center the icon */
   justify-content: center;
-  /* This will horizontally center the icon */
-  /* Set the dimensions of the anchor tag as needed */
-
-  /* Example height */
   color: #FFF;
+}
 
+.kontakt{
+  margin-bottom: 20px;
+}
+
+
+.mobileHr {
+  display: none; /* Hide by default */
+  border-color: #FFF; /* White border color for visibility */
+  border-width: 1px; /* Consistent with other HRs */
 }
 
 @media (max-width: 768px) {
-
-  .footerContent h1,
-  .footerContent h2,
-  .footerContent p {
-    font-size: 0.7em;
-    /* Adjust the font size as needed */
-  }
+.NewFooter{
+  background-color: #00315A;
+}
 
   .blackbar {
-    height: 420px;
-
+    height: 780px;
+  }
+  .footer hr {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .mobileHr {
+    display: block; /* Show only on mobile */
+    margin-top: 20px; /* Spacing before the HR */
+    margin-bottom: 20px; /* Spacing after the HR */
+    width: 90%; /* Full width */
   }
 
 }

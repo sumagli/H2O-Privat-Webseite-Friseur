@@ -12,12 +12,15 @@ interface FooterProps {
 
 const NewFooter = ({ mainPage }: FooterProps) => {
   const openingTimes = useOpeningTimes();
+  const isMobile = window.innerWidth <= 768; // Checking window width to determine if it's a mobile device
 
   return (
     <div className={styles.NewFooter}>
-      <div className={`${mainPage ? styles.blackbar : ""}`} />
+      <div className={`${mainPage && !isMobile ? styles.blackbar : ""}`} />
       <div
-        className={`${styles.footer} ${!mainPage ? styles.footerNotFixed : ""}`}
+        className={`${styles.footer} ${
+          !mainPage || isMobile ? styles.footerNotFixed : ""
+        }`}
       >
         <h1 style={{ paddingBottom: `30px` }}>HAAR ZWEI OOH!</h1>
         <hr />
@@ -46,7 +49,8 @@ const NewFooter = ({ mainPage }: FooterProps) => {
               <p key={day}>{`${day}: ${hours}`}</p>
             ))}
           </div>
-          <div>
+          <hr className={styles.mobileHr} />
+          <div className={styles.kontakt}>
             <h3>Kontakt:</h3>
             <p>Hackstraße 22</p>
             <p>70190 Stuttgart</p>
