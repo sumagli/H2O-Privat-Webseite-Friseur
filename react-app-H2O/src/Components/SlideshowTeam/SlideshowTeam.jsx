@@ -16,7 +16,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const SlideshowTeam = ({ overlay, isVisible, teamImages }) => {
   const images = [
     {
-      imgPath: teamImages.ImageUrls[0],
+      imgPath: teamImages.ImageUrls[0]?.url,
       upperTitle: "",
       title: "Unser Team",
       subTitle: "",
@@ -24,7 +24,7 @@ const SlideshowTeam = ({ overlay, isVisible, teamImages }) => {
       link: "/Vita-Iris",
     },
     {
-      imgPath: teamImages.ImageUrls[1],
+      imgPath: teamImages.ImageUrls[1]?.url,
       upperTitle: "",
       title: "Iris",
       subTitle: "Friseurmeisterin",
@@ -32,7 +32,7 @@ const SlideshowTeam = ({ overlay, isVisible, teamImages }) => {
       link: "/Vita-Iris",
     },
     {
-      imgPath: teamImages.ImageUrls[2],
+      imgPath: teamImages.ImageUrls[2]?.url,
       upperTitle: "",
       title: "Sabine",
       subTitle: "Friseurmeisterin",
@@ -40,7 +40,7 @@ const SlideshowTeam = ({ overlay, isVisible, teamImages }) => {
       link: "/Vita-Sabine",
     },
     {
-      imgPath: teamImages.ImageUrls[3],
+      imgPath: teamImages.ImageUrls[3]?.url,
       upperTitle: "",
       title: "Ilona",
       subTitle: "Friseurmeisterin & Fotografin",
@@ -168,7 +168,9 @@ const SlideshowTeam = ({ overlay, isVisible, teamImages }) => {
           </Link>
         )}
       </div>
-      <div className={styles.PhotoBy}>Foto: Ilona Scheffbuch</div>
+      <div className={styles.PhotoBy}>
+        {teamImages.ImageUrls[activeStep]?.text}
+      </div>
     </Box>
   );
 };
